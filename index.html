@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Purchase Profit or Loss</title>
+    <style>
+      .container {
+        padding: 0rem 1rem;
+        margin: 2rem;
+      }
+      .container .center {
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        border: 2px solid black;
+        /* border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem; */
+      }
+      h1 {
+        text-align: center;
+      }
+      .txt {
+        display: block;
+        text-align: center;
+      }
+      #Output {
+        height: 10vh;
+        max-width: 600px;
+        border: 2px dashed black;
+        padding: 1rem;
+        padding-top: 2rem;
+        margin: auto;
+        max-height: 50px;
+      }
+      #submit-btn {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Stock Purchase Profit or Loss</h1>
+    <div class="container">
+      <label for="initialPrice" class="txt">Initial Price</label>
+      <input type="text" class="center" id="initialPrice" />
+    </div>
+
+    <div class="container">
+      <label for="numberOfStocks" class="txt">Number of Stocks</label>
+      <input type="text" class="center" id="numberOfStocks" />
+    </div>
+
+    <div class="container">
+      <label for="currentPrice" class="txt">Current Price</label>
+      <input type="text" class="center" id="currentPrice" />
+    </div>
+
+    <div class="container">
+      <button class="center" id="submit-btn">Check</button>
+    </div>
+
+    <div id="Output"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
