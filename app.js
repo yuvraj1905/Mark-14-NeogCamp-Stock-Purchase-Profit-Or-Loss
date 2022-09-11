@@ -10,6 +10,10 @@ function checkPrice() {
   var quantity = Number(numberOfStocks.value);
   var currentValue = Number(currentPrice.value);
 
+  if (startPrice === "" || quantity === "" || currentValue === "") {
+    alert("Please enter all required values ");
+  }
+
   var moneyInvested = startPrice * quantity;
   var currentEstimate = currentValue * quantity;
 
@@ -24,8 +28,10 @@ function checkProfitOrLoss(initial, now) {
       : `Profit of ${now - initial} and `;
   var resultPercent =
     initial > now
-      ? `you got a loss of ${Math.trunc((initial - now) * 100) / initial}%.`
-      : `you got a Profit of ${Math.trunc((now - initial) * 100) / initial}%.`;
+      ? `you got a loss of ${(((initial - now) * 100) / initial).toFixed(2)}%.`
+      : `you got a Profit of ${(((now - initial) * 100) / initial).toFixed(
+          2
+        )}%.`;
 
   var ans;
   if (initial === now) {
