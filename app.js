@@ -49,6 +49,10 @@ function checkProfitOrLoss(initial, now) {
     document.body.style.backgroundColor = "red";
     return;
   }
+  if (lossPercent < 50) {
+    document.body.style.backgroundColor = "white";
+    return;
+  }
 }
 
 submitbtn.addEventListener("click", checkPrice);
