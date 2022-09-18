@@ -48,8 +48,7 @@ function checkProfitOrLoss(initial, now) {
   if (lossPercent > 50) {
     document.body.style.backgroundColor = "red";
     return;
-  }
-  if (lossPercent < 50) {
+  } else if (lossPercent <= 50) {
     document.body.style.backgroundColor = "white";
     return;
   }
